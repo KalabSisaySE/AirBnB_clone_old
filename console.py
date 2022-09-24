@@ -187,7 +187,8 @@ class HBNBCommand(cmd.Cmd):
                             cmd, cls_name, id, params, "*dict*"
                         )
                 else:
-                    print("not dictionary")
+                    params = params.split(', ')
+                    return "{} {} {} {} {}".format(cmd, cls_name, id, params[0], params[1])
         else:
             return line
 
